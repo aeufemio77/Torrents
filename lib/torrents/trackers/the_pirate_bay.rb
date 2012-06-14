@@ -1,7 +1,7 @@
 module Trackers
   class ThePirateBay
     def details(tr)
-      "http://thepiratebay.org" + tr.at_css('.detLink').attr('href')
+      "http://thepiratebay.se" + tr.at_css('.detLink').attr('href')
     end
   
     def torrent(tr)
@@ -21,11 +21,11 @@ module Trackers
     end
     
     def search_url
-      "http://thepiratebay.org/search/<SEARCH>/<PAGE>/99/0"
+      "http://thepiratebay.se/search/<SEARCH>/<PAGE>/99/0"
     end
     
     def recent_url
-      "http://thepiratebay.org/recent/<PAGE>"
+      "http://thepiratebay.se/recent/<PAGE>"
     end
     
     def start_page_index
@@ -33,7 +33,7 @@ module Trackers
     end
     
     def category_url(type)
-      {:movies => "http://thepiratebay.org/browse/201/<PAGE>/3"}[type]
+      {:movies => "http://thepiratebay.se/browse/201/<PAGE>/3"}[type]
     end
     
     def id(details)
